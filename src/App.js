@@ -12,6 +12,15 @@ const items = [
     {id: 6, content: 'item 6', start: '2014-04-27', type: 'point'}
   ];
 
+let options = {
+  start: "2014-04-10",
+  end: "2014-04-30",
+  editable: true /* this option means you can add or remove items by clicking on the timeline */,
+  margin: {
+    item: 20
+  }
+}
+
 class App extends Component {
   render() {
     return (
@@ -19,6 +28,7 @@ class App extends Component {
         <p className="header">A basic timeline. You can move and zoom the timeline, and select items.</p>
         <Timeline
           items={items}
+          options={options}
         />
       </div>
     );
